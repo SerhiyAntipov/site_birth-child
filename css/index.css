@@ -1,0 +1,926 @@
+@import url("reset.css");
+
+@import url("var.css");
+
+@font-face {
+    font-family: "DancingScript";
+    src        : url("../fonts/DancingScript-VariableFontwght.woff2");
+}
+
+@font-face {
+    font-family: "Ranchers-Regular";
+    src        : url("../fonts/Ranchers-Regular.woff2");
+}
+
+html {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size  : 16px;
+    margin     : 0;
+    padding    : 0;
+}
+
+.wrapper {
+    min-width: 320px;
+    max-width: 1920px;
+    overflow : hidden;
+    margin   : 0 auto;
+}
+
+.teddy-bear-string {
+    display: block;
+}
+
+.congratulation {
+    position  : relative;
+    margin-top: 30px;
+    text-align: center;
+}
+
+.teddy-bear {
+    width   : 460px;
+    height  : auto;
+    display : block;
+    position: absolute;
+    right   : 0;
+    top     : 70px;
+}
+
+.congratulation .container {
+    position: relative;
+}
+
+.container {
+    margin : 0 auto;
+    padding: 10px;
+}
+
+.title {
+    color         : var(--color-blue);
+    text-transform: lowercase;
+    font-family   : "DancingScript";
+    font-size     : 10rem;
+    transform     : rotateZ(-10deg);
+    position      : relative;
+    z-index       : 15;
+    display       : inline-block;
+    line-height   : 1.4;
+    font-weight   : bold;
+}
+
+.sub-title {
+    color         : var(--color-dark-blue);
+    text-transform: uppercase;
+    font-size     : 5rem;
+    font-weight   : bold;
+    position      : relative;
+    z-index       : 15;
+    font-family   : "Ranchers-Regular";
+    letter-spacing: 5px;
+}
+
+.main-text {
+    font-size     : 10rem;
+    font-weight   : 900;
+    text-transform: uppercase;
+    color         : var(--color-lite--blue);
+    opacity       : .8;
+    line-height   : 1;
+    filter        : contrast(3) brightness(0.5);
+    z-index       : 9;
+    font-family   : "Ranchers-Regular";
+    letter-spacing: 20px;
+}
+
+h2.main-text {
+    font-size     : 6rem;
+    opacity       : 0.5;
+    letter-spacing: 5px;
+}
+
+.bg-wood {
+    background: url(../images/bg_blue-wood.jpg);
+}
+
+.cloud {
+    width   : 300px;
+    height  : 200px;
+    position: absolute;
+    opacity : .9;
+}
+
+#cloud {
+    left     : 18%;
+    top      : 0;
+    transform: scale(1.5);
+}
+
+#bulbe {
+    position: fixed;
+    top     : 0;
+}
+
+/* train ==================== */
+
+.train .container {
+    text-align    : center;
+    color         : var(--color-wagon-blue-1);
+    text-transform: uppercase;
+    font-size     : 3rem;
+    font-family   : "Ranchers-Regular";
+    font-weight   : lighter;
+    padding-bottom: 50px;
+}
+
+.train-wrapper {
+    display        : flex;
+    flex-wrap      : wrap;
+    justify-content: center;
+    align-items    : flex-end;
+}
+
+.locomotive-head {
+    margin-bottom: -8px;
+}
+
+.wagon-wrapper {
+    padding: 10px;
+}
+
+.wagon-wrapper-02 {
+    padding-top: 305px;
+}
+
+.wagon-wrapper-03,
+.wagon-wrapper-01 {
+    padding-top: 220px;
+}
+
+.locomotive-chimney::before,
+.locomotive-chimney::after {
+    content                  : "";
+    width                    : 45px;
+    height                   : 45px;
+    display                  : block;
+    position                 : absolute;
+    top                      : -30px;
+    left                     : 0;
+    background               : url(../images/star.png) no-repeat;
+    background-size          : contain;
+    z-index                  : -1;
+    animation-timing-function: linear;
+    animation-duration       : 3s;
+    animation-name           : star-move;
+    animation-iteration-count: infinite;
+}
+
+.locomotive-chimney::after {
+    animation-delay: 1.5s;
+}
+
+.locomotive-wrapper {
+    text-align: right;
+}
+
+.wagon.locomotive {
+    width                    : 360px;
+    position                 : relative;
+    background-size          : 14.4px 3px;
+    background-repeat        : repeat-x;
+    background-position      : 0 20px, 0 75px;
+    background-color         : var(--color-wagon-blue-2);
+    background-image         : linear-gradient(90deg, transparent 5px, white 5px), linear-gradient(90deg, transparent 5px, white 5px);
+    border-top-left-radius   : 100px 150px;
+    border-bottom-left-radius: 30px 90px;
+}
+
+.locomotive-cabine {
+    width           : 47%;
+    height          : 105px;
+    position        : relative;
+    display         : inline-block;
+    background-image: repeating-linear-gradient(var(--color-wagon-blue-2) 0 15%, var(--color-wagon-blue-3) 15% 30%, var(--color-wagon-blue-4) 30% 45%);
+    border-top      : solid 30px var(--color-wagon-blue-1);
+    position        : relative;
+}
+
+.locomotive-chimney {
+    width           : 45px;
+    height          : 50px;
+    display         : inline-block;
+    background-image: linear-gradient(var(--color-wagon-blue-2) 0 33%, var(--color-wagon-blue-3) 33% 66%, var(--color-wagon-blue-4) 66% 100%);
+    border-top      : solid 30px var(--color-wagon-blue-1);
+    margin-right    : 10%;
+    position        : relative;
+}
+
+.locomotive-cabine::before {
+    content         : "";
+    width           : 35%;
+    height          : 65%;
+    display         : block;
+    background-color: white;
+    border-radius   : 40%;
+    border          : solid 4px var(--color-wagon-blue-1);
+    position        : absolute;
+    left            : 15px;
+    top             : 10px;
+}
+
+.locomotive-cabine::after {
+    content         : "";
+    width           : 25%;
+    height          : 55%;
+    display         : block;
+    background-color: white;
+    border-radius   : 40%;
+    border          : solid 4px var(--color-wagon-blue-1);
+    position        : absolute;
+    right           : 15px;
+    top             : 10px;
+}
+
+.wagon {
+    display                   : inline-block;
+    width                     : 240px;
+    height                    : 110px;
+    position                  : relative;
+    border-top                : solid 30px var(--color-wagon-blue-1);
+    border-bottom-left-radius : 20px 200px;
+    border-bottom-right-radius: 20px 200px;
+    margin-bottom             : 45px;
+}
+
+.wagon::before,
+.wagon::after,
+.locomotive-wrapper::after {
+    content         : '';
+    width           : 36px;
+    height          : 36px;
+    display         : block;
+    border-radius   : 50%;
+    background-color: var(--color-wagon-grey-2);
+    border          : 14px solid var(--color-wagon-grey-1);
+    position        : absolute;
+    background-image: radial-gradient(circle, white 6px, transparent 6px);
+    bottom          : -43px;
+}
+
+.locomotive-wrapper::after {
+    bottom: 14px;
+    left  : 110px;
+}
+
+.wagon.locomotive::after {
+    width           : 80px;
+    height          : 80px;
+    border          : 20px solid var(--color-wagon-grey-1);
+    background-image: radial-gradient(circle, white 10px, transparent 10px);
+}
+
+.wagon.locomotive::after::after {
+    content   : '';
+    width     : 100px;
+    height    : 100px;
+    background: black;
+}
+
+.wagon::before {
+    left: 20px;
+}
+
+.wagon::after {
+    right: 20px;
+}
+
+.wagon.wagon-03 {
+    background-image: repeating-linear-gradient(var(--color-wagon-blue-2) 0 15%, var(--color-wagon-blue-3) 15% 30%, var(--color-wagon-blue-4) 30% 45%);
+}
+
+.wagon.wagon-02 {
+    background-color: var(--color-wagon-blue-2);
+}
+
+.wagon.wagon-01 {
+    background-size    : 50px 50px;
+    background-repeat  : repeat;
+    background-position: 25px 25px, 0px 0px;
+    background-color   : var(--color-wagon-blue-2);
+    background-image   : radial-gradient(circle, white 8px, transparent 8px), radial-gradient(circle, white 8px, transparent 8px);
+}
+
+.wagon::after {
+    animation-name           : move;
+    animation-duration       : 2s;
+    animation-iteration-count: infinite;
+}
+
+.wagon::before,
+.locomotive-wrapper::after {
+    animation-name           : move;
+    animation-duration       : 2s;
+    animation-iteration-count: infinite;
+    animation-delay          : .5s;
+}
+
+.wagon-wrapper-02 {
+    background     : url(../images/animals-giraffe_260.png);
+    animation-delay: 0s;
+}
+
+.wagon-wrapper-01 {
+    background     : url(../images/animals-elephant_260.png);
+    animation-delay: .5s;
+}
+
+.wagon-wrapper-03 {
+    background     : url(../images/animals-rabbit_260.png);
+    animation-delay: 1s;
+}
+
+.wagon-wrapper {
+    background-repeat        : no-repeat;
+    background-position      : bottom 85px center;
+    background-size          : contain;
+    animation-duration       : 1.5s;
+    animation-name           : rotate;
+    animation-iteration-count: infinite;
+}
+
+.wagon-wrapper-03 {
+    background-position: bottom 115px center;
+}
+
+/* slider ====================== */
+.slider {
+    max-width: 80%;
+    margin   : 10px auto 70px;
+}
+
+.slick-slide img {
+    display   : block;
+    padding   : 20px;
+    max-height: 400px;
+}
+
+.slick-prev {
+    left: -60px;
+}
+
+.slick-next {
+    right: -60px;
+}
+
+.slick-prev,
+.slick-next {
+    width : 60px;
+    height: 60px;
+}
+
+.slick-prev:before,
+.slick-next:before {
+    font-size: 60px;
+    color    : var(--color-wagon-blue-1);
+}
+
+
+.slick-dots li.slick-active button:before {
+    color: var(--color-wagon-blue-1);
+}
+
+.slick-dots {
+    bottom: inherit;
+}
+
+.slick-dots li {
+    width : 30px;
+    height: 30px;
+    margin: 3px;
+}
+
+.slick-dots li button {
+    width : 30px;
+    height: 30px;
+}
+
+.slick-dots li button:before {
+    font-size  : 30px;
+    width      : 30px;
+    height     : 30px;
+    line-height: 30px;
+}
+
+/* footer  */
+.main-footer {
+    border-top      : solid 30px var(--color-wagon-blue-1);
+    background-color: var(--color-wagon-blue-2);
+    font-family     : "Ranchers-Regular";
+    letter-spacing  : 2px;
+    padding         : 40px 0;
+}
+
+.main-footer p {
+    font-size : 2rem;
+    color     : white;
+    text-align: center;
+    padding   : 10px;
+    max-width : 1200px;
+    margin    : 0 auto;
+}
+
+.hidden {
+    visibility: hidden;
+    height: 1px;
+    width: 1px;
+    position: absolute;
+    top: -1px;
+    left: -1px;
+}
+
+@keyframes move {
+    50% {
+        margin-bottom: 10px;
+        margin-right : 5px;
+    }
+
+    100% {
+        margin-bottom: 0;
+        margin-right : 0;
+    }
+}
+
+@keyframes move-460 {
+    50% {
+        margin-bottom: 4px;
+        margin-right : 2px;
+    }
+
+    100% {
+        margin-bottom: 0;
+        margin-right : 0;
+    }
+}
+
+@keyframes rotate {
+    25% {
+        transform: rotate(1deg);
+    }
+
+    75% {
+        transform: rotate(-1deg);
+    }
+}
+
+@keyframes star-move {
+    0 {
+        top : -30px;
+        left: 0;
+    }
+
+    25% {
+        top : -90px;
+        left: 10px;
+    }
+
+    50% {
+        top : -120px;
+        left: 30px;
+    }
+
+    75% {
+        opacity: 1;
+        top    : -140px;
+        left   : 70px;
+    }
+
+    100% {
+        opacity  : 0;
+        top      : -150px;
+        left     : 120px;
+        transform: rotate(180deg)
+    }
+}
+
+@media only screen and (max-width: 1600px) {
+    .teddy-bear {
+        right: 0;
+        top  : 90px;
+    }
+}
+
+@media only screen and (max-width: 1280px) {
+    html {
+        font-size: 14px;
+    }
+
+    .teddy-bear {
+        width: 320px;
+        top  : 45px;
+    }
+
+    .wagon {
+        width        : 160px;
+        height       : 70px;
+        border-top   : solid 20px var(--color-wagon-blue-1);
+        margin-bottom: 35px;
+    }
+
+    .wagon.locomotive {
+        width: 220px;
+    }
+
+    .wagon-wrapper {
+        padding            : 5px;
+        background-position: bottom 60px center;
+    }
+
+    .wagon-wrapper-02 {
+        padding-top: 200px;
+    }
+
+    .wagon-wrapper-01,
+    .wagon-wrapper-03 {
+        padding-top: 150px;
+    }
+
+    .wagon-wrapper-03 {
+        background-position: bottom 85px center;
+    }
+
+    .wagon::before,
+    .wagon::after {
+        width : 20px;
+        height: 20px;
+        bottom: -30px;
+    }
+
+    .wagon.locomotive::after {
+        width : 40px;
+        height: 40px;
+    }
+
+    .locomotive-wrapper::after {
+        width : 20px;
+        height: 20px;
+        bottom: 12px;
+        left  : 67px;
+    }
+
+    .wagon::after {
+        right: 10px;
+    }
+
+    .wagon::before {
+        left: 10px;
+    }
+
+    .locomotive-cabine {
+        height    : 70px;
+        border-top: solid 20px var(--color-wagon-blue-1);
+    }
+
+    .locomotive-cabine::before {
+        content: "";
+        width  : 25%;
+        height : 60%;
+    }
+
+    .locomotive-cabine::after {
+        content: "";
+        width  : 20%;
+        height : 40%;
+    }
+
+    .locomotive-chimney {
+        width     : 30px;
+        height    : 30px;
+        border-top: solid 20px var(--color-wagon-blue-1);
+    }
+
+    .locomotive-chimney::before,
+    .locomotive-chimney::after {
+        width : 35px;
+        height: 35px;
+    }
+}
+
+
+@media only screen and (max-width: 1024px) {
+
+    html {
+        font-size: 12px;
+    }
+
+    .teddy-bear {
+        width: 240px;
+        top  : -40px;
+    }
+
+    .main-text {
+        font-size: 15rem;
+    }
+
+    .congratulation {
+        margin-top: 100px;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .slider {
+        max-width: 80%;
+    }
+
+    .teddy-bear {
+        width: 160px;
+        top  : 0;
+    }
+
+    .congratulation {
+        margin-top: 40px;
+    }
+
+    .title {
+        font-size: 10rem;
+    }
+
+    .sub-title {
+        font-size: 5rem;
+    }
+
+    .main-text {
+        font-size: 12rem;
+    }
+
+    h2.main-text {
+        font-size: 10rem;
+    }
+
+    .slick-slide img {
+        max-height: 400px;
+    }
+
+    .wagon {
+        width        : 120px;
+        height       : 50px;
+        border-top   : solid 15px var(--color-wagon-blue-1);
+        margin-bottom: 25px;
+    }
+
+    .wagon.locomotive {
+        width: 160px;
+    }
+
+    .wagon-wrapper {
+        padding            : 5px;
+        background-position: bottom 35px center;
+    }
+
+    .wagon-wrapper-02 {
+        padding-top: 155px;
+    }
+
+    .wagon-wrapper-01,
+    .wagon-wrapper-03 {
+        padding-top: 115px;
+    }
+
+    .wagon-wrapper-03 {
+        background-position: bottom 60px center;
+    }
+
+    .wagon::before,
+    .wagon::after {
+        width : 20px;
+        height: 20px;
+        bottom: -20px;
+    }
+
+    .wagon.locomotive::after {
+        width : 40px;
+        height: 40px;
+    }
+
+    .locomotive-wrapper::after {
+        width : 20px;
+        height: 20px;
+        bottom: 12px;
+        left  : 55px;
+    }
+
+    .wagon::after {
+        right: 10px;
+    }
+
+    .wagon::before {
+        left: 10px;
+    }
+
+    .locomotive-cabine {
+        height    : 50px;
+        border-top: solid 15px var(--color-wagon-blue-1);
+    }
+
+    .locomotive-cabine::before {
+        content: "";
+        width  : 25%;
+        height : 50%;
+        left   : 6px;
+    }
+
+    .locomotive-cabine::after {
+        content: "";
+        width  : 20%;
+        height : 40%;
+    }
+
+    .locomotive-chimney {
+        width     : 30px;
+        height    : 30px;
+        border-top: solid 20px var(--color-wagon-blue-1);
+    }
+
+    .locomotive-chimney::before,
+    .locomotive-chimney::after {
+        width : 35px;
+        height: 35px;
+    }
+
+    .wagon::before,
+    .wagon::after,
+    .locomotive-wrapper::after {
+        border: 7px solid var(--color-wagon-grey-1);
+    }
+
+    .wagon.locomotive::after {
+        border: 8px solid var(--color-wagon-grey-1);
+    }
+
+    .wagon::after {
+        animation-name           : move-460;
+        animation-duration       : 2s;
+        animation-iteration-count: infinite;
+    }
+
+    .wagon::before,
+    .locomotive-wrapper::after {
+        animation-name           : move-460;
+        animation-duration       : 2s;
+        animation-iteration-count: infinite;
+        animation-delay          : .5s;
+    }
+
+}
+
+@media only screen and (max-width: 640px) {
+    .slider {
+        max-width: 75%;
+    }
+
+    .slick-slide img {
+        max-height: 360px;
+    }
+
+    .sub-title {
+        font-size: 3rem;
+    }
+
+    .main-text {
+        font-size: 9rem;
+    }
+
+    h2.main-text {
+        font-size: 7rem;
+    }
+
+    .title {
+        font-size: 8rem;
+    }
+
+    #cloud {
+        top      : -37px;
+        transform: scale(1);
+        left     : 0;
+    }
+
+    .main-footer {
+        padding: 20px 0;
+    }
+}
+
+@media only screen and (max-width: 580px) {
+    .wagon-wrapper-03 {
+        display: none;
+    }
+
+    .main-footer p {
+        font-size: 2rem;
+    }
+
+    .title {
+        font-size: 7rem;
+    }
+
+    .teddy-bear {
+        width: 140px;
+    }
+}
+
+@media only screen and (max-width: 460px) {
+    .slider {
+        max-width: 68%;
+    }
+
+    html {
+        font-size: 10px;
+    }
+
+    .teddy-bear {
+        width: 120px;
+    }
+
+    .wagon-wrapper-02 {
+        display: none;
+    }
+
+    .slider {
+        margin: 10px auto 110px;
+    }
+}
+
+@media only screen and (max-width: 420px) {
+
+    html {
+        font-size: 9px;
+    }
+
+    .teddy-bear {
+        width: 90px;
+        top  : -20px;
+    }
+
+    .slider .slick-dots {
+        visibility: hidden;
+    }
+
+    .main-text {
+        font-size: 9rem;
+    }
+
+    h2.main-text {
+        font-size: 7rem;
+    }
+
+    .slider {
+        margin: 10px auto 10px;
+    }
+
+    .slick-dotted.slick-slider {
+        margin-bottom: 0;
+    }
+}
+
+
+@media only screen and (max-width: 360px) {
+
+    html {
+        font-size: 7px;
+    }
+
+    .teddy-bear {
+        top: -35px;
+    }
+
+    .congratulation {
+        margin-top: 60px;
+    }
+
+    #cloud {
+        transform: scale(.8);
+        left     : -20px;
+    }
+
+    .title {
+        font-size: 9rem;
+    }
+
+    .main-footer p {
+        font-size: 3rem;
+    }
+
+    .sub-title {
+        text-align : center;
+        margin-left: 0;
+    }
+
+}
+
+
+@media only screen and (max-width: 320px) {
+    .slider {
+        max-width: 65%;
+    }
+
+    .title {
+        font-size: 8rem;
+    }
+
+}
